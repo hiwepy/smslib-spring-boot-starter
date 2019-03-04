@@ -1,0 +1,7 @@
+hsqldb:
+  server:
+    protocol: http
+    database: /test
+    dbname: txf
+    enabled: true
+    
