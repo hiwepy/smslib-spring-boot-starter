@@ -11,8 +11,8 @@
 	</parent>
 	
 	<groupId>com.github.vindell</groupId>
-	<artifactId>spring-boot-starter-smslib</artifactId>
-	<description>Spring Boot Starter For Smslib</description>
+	<artifactId>spring-boot-starter-vfs</artifactId>
+	<description>Spring Boot Starter For Commons VFS</description>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/vindell/${project.artifactId}</url>
@@ -372,7 +372,7 @@
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-surefire-plugin.vertsion>2.22.1</maven-surefire-plugin.vertsion>
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
-		<smslib.version>3.4.1</smslib.version>
+		<commons-vfs2.version>2.4.1</commons-vfs2.version>
 	</properties>
 	
 	<dependencies>
@@ -418,39 +418,43 @@
 			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
 		
- 		<!-- https://mvnrepository.com/artifact/org.jsmpp/jsmpp -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-vfs2 -->
 		<dependency>
-		    <groupId>org.jsmpp</groupId>
-		    <artifactId>jsmpp</artifactId>
-		    <version>2.3.7</version>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-vfs2</artifactId>
+		    <version>${commons-vfs2.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.bidib.jbidib.org.qbang.rxtx/rxtxcomm -->
+		<!-- https://mvnrepository.com/artifact/com.sshtools/vfs-nfs -->
 		<dependency>
-		    <groupId>org.bidib.jbidib.org.qbang.rxtx</groupId>
-		    <artifactId>rxtxcomm</artifactId>
-		    <version>2.2</version>
+		    <groupId>com.sshtools</groupId>
+		    <artifactId>vfs-nfs</artifactId>
+		    <version>3.0.2</version>
 		</dependency>
-				
- 		<dependency>
-			<groupId>org.smslib</groupId>
-			<artifactId>smslib</artifactId>
-			<version>${smslib.version}</version>
-		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sshtools/vfs-ext -->
 		<dependency>
-			<groupId>org.smslib</groupId>
-			<artifactId>comm</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/main/resources/comm.jar</systemPath>
+		    <groupId>com.sshtools</groupId>
+		    <artifactId>vfs-ext</artifactId>
+		    <version>3.0.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.impact/vfs-mysql -->
 		<dependency>
-			<groupId>gnu.io</groupId>
-			<artifactId>rxtx</artifactId>
-			<version>2.2pre2</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/main/resources/RXTXcomm.jar</systemPath>
+		    <groupId>com.impact</groupId>
+		    <artifactId>vfs-mysql</artifactId>
+		    <version>1.0</version>
 		</dependency>
-		
+		<!-- https://mvnrepository.com/artifact/com.impact/vfs-ftpd -->
+		<dependency>
+		    <groupId>com.impact</groupId>
+		    <artifactId>vfs-ftpd</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.impact/vfs-webdav -->
+		<dependency>
+		    <groupId>com.impact</groupId>
+		    <artifactId>vfs-webdav</artifactId>
+		    <version>1.0</version>
+		</dependency>
+									
 	</dependencies>
 	
 
